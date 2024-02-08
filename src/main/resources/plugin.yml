@@ -1,0 +1,28 @@
+name: Verifier
+version: "${project.version}"
+main: com.fwloopins.verifier.Verifier
+api-version: "1.19"
+depend: [LuckPerms]
+authors: [Fruitloopins]
+description: Allow players to manage builder role on build.fwloopins.com
+website: https://fwloopins.com
+
+commands:
+  unverify:
+    description: "Unverify a player and remove builder role from them"
+    usage: "/unverify {username}"
+    permission: "verifier.command.unverify"
+
+  verify:
+    description: "Verify a player and give them builder role"
+    usage: "/verify {username}"
+    permission: "verifier.command.verify"
+
+permissions:
+  verifier.command.unverify:
+    description: "Grants permission to remove builder role from a player"
+    default: false
+
+  verifier.command.verify:
+    description: "Grants permission to give a player builder role"
+    default: false
